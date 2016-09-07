@@ -8,8 +8,8 @@ import org.springframework.data.repository.query.Param;
 import first.view.Item;
 
 public interface ItemDAO {
-	
+
 	@Query("select * from mytask2 where id =#{id}")
-	List<Item> getItemById(@Param("id")String id);
+	List<Item> getItemById(@Param("id") String id);
 
 }

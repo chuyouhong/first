@@ -1,1 +1,1 @@
-./gradlew build && java -jar build/libs/ng-spring-boot-0.0.1-SNAPSHOT.jar
+./gradlew build && java -jar build/libs/first.jar
