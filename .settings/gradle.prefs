@@ -1,0 +1,12 @@
+{
+  "1.0": {
+    "project_path": ":",
+    "project_dir": "F:\\myFirstProject\\first",
+    "connection_project_dir": "F:\\myFirstProject\\first",
+    "connection_gradle_user_home": "C:\\Users\\Administrator\\.gradle",
+    "connection_gradle_distribution": "GRADLE_DISTRIBUTION(LOCAL_INSTALLATION(D:\\gradle\\gradle-2.8-all\\gradle-2.8))",
+    "connection_java_home": "C:\\Program Files\\Java\\jdk1.8.0_65",
+    "connection_jvm_arguments": "",
+    "connection_arguments": ""
+  }
+}
