@@ -33,8 +33,13 @@
 			<arguments/>
 		</buildCommand>
 		<buildCommand>
-			<name>org.eclipse.buildship.core.gradleprojectbuilder</name>
-			<arguments/>
+			<name>org.eclipse.ui.externaltools.ExternalToolBuilder</name>
+			<arguments>
+				<dictionary>
+					<key>LaunchConfigHandle</key>
+					<value>&lt;project&gt;/.externalToolBuilders/org.eclipse.buildship.core.gradleprojectbuilder.launch</value>
+				</dictionary>
+			</arguments>
 		</buildCommand>
 	</buildSpec>
 	<linkedResources/>
