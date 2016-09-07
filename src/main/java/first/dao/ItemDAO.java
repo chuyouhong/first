@@ -1,15 +1,14 @@
 package first.dao;
 
 import java.util.List;
+import java.util.Map;
 
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
-
-import first.view.Item;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 
 public interface ItemDAO {
 
-	@Query("select * from mytask2 where id =#{id}")
-	List<Item> getItemById(@Param("id") String id);
+	@Select("select * from mytask2 where id =#{id}")
+	List<Map> getItemById(@Param("id") String id);
 
 }

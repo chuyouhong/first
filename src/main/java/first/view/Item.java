@@ -1,18 +1,11 @@
 package first.view;
 
-import javax.persistence.*;
-
-@Entity
 public class Item {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
-	@Column
-	private boolean checked;
-	@Column
-	private String name;
-	@Column
-	private String description;
+	
+	protected Integer id;
+	protected boolean checked;
+	protected String name;
+	protected String description;
 
 	public Integer getId() {
 		return id;

@@ -12,7 +12,7 @@ import first.service.ItemService;
 public class ItemController {
 
 	@Autowired
-	private ItemService itemService;
+	ItemService itemService;
 
 	@RequestMapping(value = "/test/", method = RequestMethod.GET)
 	public String get(@RequestParam(value = "name") String name) {
