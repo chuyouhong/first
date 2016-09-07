@@ -1,6 +1,8 @@
 package first.view;
 
-public class Item {
+import java.io.Serializable;
+
+public class Item implements Serializable {
 	
 	protected Integer id;
 	protected boolean checked;

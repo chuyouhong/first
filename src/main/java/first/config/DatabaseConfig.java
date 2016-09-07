@@ -1,4 +1,4 @@
-package config;
+package first.config;
 
 import javax.annotation.PostConstruct;
 import javax.sql.DataSource;

@@ -1,7 +1,6 @@
 package first.serviceImpl;
 
 import java.util.List;
-import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -17,7 +16,7 @@ public class ItemserviceImpl implements ItemService {
 	ItemDAO itemDAO;
 
 	@Override
-	public List<Map> getItemById(String id) {
+	public List<Item> getItemById(String id) {
 
 		return itemDAO.getItemById(id);
 	}
