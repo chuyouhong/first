@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import first.model.Item;
 import first.service.ItemService;
-import first.view.Item;
 
 @Controller
 public class ItemController {

@@ -5,7 +5,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
-import first.view.Item;
+import first.model.Item;
 
 public interface ItemDAO {
 

@@ -1,4 +1,4 @@
-package first.view;
+package first.model;
 
 import java.io.Serializable;
 

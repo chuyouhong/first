@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import first.dao.ItemDAO;
+import first.model.Item;
 import first.service.ItemService;
-import first.view.Item;
 
 @Component
 public class ItemserviceImpl implements ItemService {

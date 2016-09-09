@@ -2,7 +2,7 @@ package first.service;
 
 import java.util.List;
 
-import first.view.Item;
+import first.model.Item;
 
 public interface ItemService {
 
