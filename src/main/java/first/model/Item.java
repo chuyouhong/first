@@ -5,7 +5,16 @@ import java.io.Serializable;
 public class Item implements Serializable {
 	
 	protected Integer id;
-	protected boolean checked;
+	protected String gender;
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
 	protected String name;
 	protected String description;
 
@@ -15,14 +24,6 @@ public class Item implements Serializable {
 
 	public void setId(Integer id) {
 		this.id = id;
-	}
-
-	public boolean isChecked() {
-		return checked;
-	}
-
-	public void setChecked(boolean checked) {
-		this.checked = checked;
 	}
 
 	public String getName() {

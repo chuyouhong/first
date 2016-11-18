@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import first.model.Item;
 import first.service.ItemService;
@@ -18,13 +18,15 @@ public class ItemController {
 	@Autowired
 	ItemService itemService;
 	
-	@ResponseBody
 	@RequestMapping(value = "/test/", method = RequestMethod.GET)
-	public String get(@RequestParam(value = "id") String id) {
+	public ModelAndView get(@RequestParam(value = "id") String id) {
 		System.out.println(id);
 		List<Item> list = itemService.getItemById(id);
 		
-		return "hahahhahahahhahaha!!!!!!" + list.get(0).getName();
+		ModelAndView ret = new ModelAndView("item");
+
+		ret.getModel().put("list", list);
+		return ret;
 	}
 
 }
