@@ -20,10 +20,11 @@ public class ItemController {
 	
 	@ResponseBody
 	@RequestMapping(value = "/test/", method = RequestMethod.GET)
-	public String get(@RequestParam(value = "name") String name) {
-		System.out.println(name);
-		List<Item> list = itemService.getItemById(name);
-		return "hahahhahahahhahaha!!!!!!" + list;
+	public String get(@RequestParam(value = "id") String id) {
+		System.out.println(id);
+		List<Item> list = itemService.getItemById(id);
+		
+		return "hahahhahahahhahaha!!!!!!" + list.get(0).getName();
 	}
 
 }
