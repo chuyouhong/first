@@ -7,7 +7,7 @@ import java.util.List;
 
 import first.service.test.Formula;
 
-public class Demo1 {
+public class ComparatorController {
 
 	public static void main(String[] args) {
 		comparatorSort();
