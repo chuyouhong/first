@@ -23,7 +23,7 @@ public class HospitalController {
 		List<HospitalInfo> list=HospitalService.getHospitalList();
 		
 		for(HospitalInfo hos:list){
-			String downloadDir ="D:/医院图片/"+hos.getProvicne_name()+"/"+hos.getCity_name()+"/"+hos.getDistrict_name()+"/"+hos.getTown_name();
+			String downloadDir ="F:/医院图片/"+hos.getProvicne_name()+"/"+hos.getCity_name()+"/"+hos.getDistrict_name()+"/"+hos.getTown_name();
 			
 			SaveImgUtils.download("http://jtys.org/resource/images"+hos.getUrl(), downloadDir,hos.getName());
 		}

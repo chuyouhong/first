@@ -32,7 +32,7 @@ public class SaveImgUtils {
 		int len;
 		// 输出的文件流
 		
-	    System.out.println("Start to save photo.");  
+	//    System.out.println("Start to save photo.");  
 	    
 	    File downloadFilePath = new File(downloadDir);  
 	    if(downloadFilePath.exists() == false)              // 如果该目录不存在,则创建之  

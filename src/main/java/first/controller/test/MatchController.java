@@ -17,7 +17,7 @@ public class MatchController {
 		// 使用循环将句子里所有的kelvin找出并替换再将内容加到sb里
 		while (result) {
 			i++;
-			m.appendReplacement(sb, "Kevin");
+			m.appendReplacement(sb, "Kelvin");
 			System.out.println("第" + i + "次匹配后sb的内容是：" + sb);
 			// 继续查找下一个匹配对象
 			result = m.find();
