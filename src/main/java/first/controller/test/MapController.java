@@ -18,6 +18,13 @@ public class MapController {
 	
 		map.computeIfPresent(4, (num, val) -> num+ val + num);
 		System.out.println(map.get(4));            // val33
+		String s = map.getOrDefault(11, "not found");
+		System.out.println(s);
+		
+		map.merge(91, "val9", (value,newValue)->value.concat(newValue));
+		System.out.println(map.get(91));
+		map.merge(91, "val4", (value,newValue)->value.concat(newValue));
+		System.out.println(map.get(91));
 		
 	}
 
