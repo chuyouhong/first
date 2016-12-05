@@ -38,7 +38,7 @@ public class SaveImgUtils {
 	    if(downloadFilePath.exists() == false)              // 如果该目录不存在,则创建之  
 	         downloadFilePath.mkdirs();  
 	      
-	    filename = downloadDir+"/"+filename+".jpg";      //生成新的照片名  
+	    filename = downloadDir+"/"+filename;      //生成新的照片名  
 	    System.out.println(filename); 
 		
 		OutputStream os = new FileOutputStream(filename);

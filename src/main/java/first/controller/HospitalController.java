@@ -1,5 +1,6 @@
 package first.controller;
 
+import java.io.File;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import first.model.HospitalInfo;
 import first.service.HospitalService;
+import first.utils.CSVUtils;
 import first.utils.SaveImgUtils;
 
 @Controller
@@ -25,7 +27,19 @@ public class HospitalController {
 		for(HospitalInfo hos:list){
 			String downloadDir ="F:/医院图片/"+hos.getProvicne_name()+"/"+hos.getCity_name()+"/"+hos.getDistrict_name()+"/"+hos.getTown_name();
 			
-			SaveImgUtils.download("http://jtys.org/resource/images"+hos.getUrl(), downloadDir,hos.getName());
+			SaveImgUtils.download("http://jtys.org/resource/images"+hos.getUrl(), downloadDir,hos.getName()+".jpg");
+		}
+	}
+	
+	
+	@RequestMapping(value = "/saveImg1/", method = RequestMethod.GET)
+	public void get1() throws Exception {
+
+		List<String> dataList=CSVUtils.importCsv(new File("D:/test/医+医生url.csv"));
+		
+		for(String s:dataList){
+			String[] arr=s.split(",");
+			SaveImgUtils.download(arr[0],"D:/test/医生头像", arr[1]);
 		}
 	}
 }
