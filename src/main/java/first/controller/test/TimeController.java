@@ -13,12 +13,16 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import java.time.temporal.ChronoField;
 import java.time.temporal.ChronoUnit;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
 public class TimeController {
 
 	public static void main(String[] args) {
+		Date date=new Date();
+		//是否为本月最后一天
+		boolean istrue=isLastDayOfMonth(date);
 
 		Clock clock = Clock.systemDefaultZone();
 		long millis = clock.millis();
@@ -91,4 +95,15 @@ public class TimeController {
 		
 		
 	}
+	
+	public static boolean isLastDayOfMonth(Date date) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");  
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        calendar.set(Calendar.DATE, (calendar.get(Calendar.DATE) + 1));
+        if (calendar.get(Calendar.DAY_OF_MONTH) == 1) {
+            return true;
+        }
+        return false;
+    } 
 }
