@@ -42,4 +42,28 @@ public class HospitalController {
 			SaveImgUtils.download(arr[0],"D:/test/医生头像", arr[1]);
 		}
 	}
+	
+	public static void main(String[] args) {
+		upLoad();
+	}
+	
+	public static void upLoad() {
+		String path = "D:/test/医生头像";
+		String names = "";
+		try {
+			File f = new File(path);
+			if (f.isDirectory()) {
+				File[] fList = f.listFiles();
+				for (int j = 0; j < fList.length; j++) {
+					File file = fList[j];
+					if (file.isFile()) {
+						names += file.getName();
+					}
+					String weburl="http://media.thedoc.cn/upload/img/?type=\"医生头像\"&suffix=\".jpg\"&file="+file;
+				}
+				System.out.println(names);
+			}
+		} catch (Exception e) {
+		}
+	}
 }
