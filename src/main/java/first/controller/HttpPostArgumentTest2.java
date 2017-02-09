@@ -2,8 +2,9 @@ package first.controller;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +21,6 @@ import org.apache.http.entity.mime.content.StringBody;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
-import org.springframework.web.multipart.MultipartFile;
 
 import first.utils.CSVUtils;
 
@@ -101,7 +101,8 @@ public class HttpPostArgumentTest2 {
 	public static void main(String[] args) throws IOException {
 		List<String> dataList=new ArrayList<String>();
 		// TODO Auto-generated method stub
-		String path = "D:/test/医生头像";
+		String path = "D:/test/专科医生头像";
+		String date=new SimpleDateFormat("yyyy-MM-dd").format(new Date());
 		HttpPostArgumentTest2 httpPostArgumentTest2 = new HttpPostArgumentTest2();
 		File f = new File(path);
 		if (f.isDirectory()) {
@@ -112,7 +113,7 @@ public class HttpPostArgumentTest2 {
 					Map<String, String> map = httpPostArgumentTest2.SubmitPost("http://media.thedoc.cn/upload/img/?type=医生头像&suffix=jpg&file=", file.getName(), path);
 					String s="update member_doctor set portrait='"+map.get("url")+"' where id="+map.get("id")+";";
 					dataList.add(s);
-					CSVUtils.exportCsv(new File("D:/test/专科医生头像.csv"), dataList);
+					CSVUtils.exportCsv(new File("D:/test/专科医生头像"+date+".csv"), dataList);
 				}
 
 			}
