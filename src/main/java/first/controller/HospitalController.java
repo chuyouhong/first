@@ -1,6 +1,8 @@
 package first.controller;
 
 import java.io.File;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,7 +41,21 @@ public class HospitalController {
 		
 		for(String s:dataList){
 			String[] arr=s.split(",");
-			SaveImgUtils.download(arr[0],"D:/test/专科医生头像", arr[1]+".jpg");
+			SaveImgUtils.download(getB(arr[0]),"D:/test/专科医生头像", arr[1]+".jpg");
 		}
+	}
+	
+	public String getB(String s) throws UnsupportedEncodingException{
+		String str="";
+		for(int i=0;i<s.length();i++){
+			String ch=s.substring(i,i+1 );
+			if(ch.matches("[\u4E00-\u9FA5]+")){
+				System.out.println(ch);
+				str+=URLEncoder.encode(ch, "utf-8");
+			}else{
+				str+=ch;
+			}	
+		}
+		return str;
 	}
 }
