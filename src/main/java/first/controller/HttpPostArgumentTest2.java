@@ -111,14 +111,12 @@ public class HttpPostArgumentTest2 {
 				File file = fList[j];
 				if (file.isFile()) {//http://media.thedoc.cn/upload/img/
 					Map<String, String> map = httpPostArgumentTest2.SubmitPost("http://media.thedoc.cn/upload/img/?type=医生头像&suffix=jpg&file=", file.getName(), path);
-					String s="update member_doctor set portrait='"+map.get("url")+"' where id="+map.get("id")+";";
+					String s="update geo_hospital set photo='"+map.get("url")+"' where id="+map.get("id")+";";
 					dataList.add(s);
-					CSVUtils.exportCsv(new File("D:/test/专科医生头像"+date+".csv"), dataList);
 				}
-
 			}
 		}
-
+		CSVUtils.exportCsv(new File("D:/test/专科医生头像"+date+".csv"), dataList);
 	}
 
 }
