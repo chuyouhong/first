@@ -36,6 +36,7 @@ public class ComparatorController {
 		Collections.sort(names, new Comparator<Integer>() {
 			@Override
 			public int compare(Integer a, Integer b) {
+				System.out.println(a.compareTo(b));
 				return a.compareTo(b);
 			}
 		});
@@ -51,6 +52,19 @@ public class ComparatorController {
 		};
 		System.out.println(formula.calculate(16));
 		System.out.println(formula.sqrt(16));
+	}
+	
+	public static int compareVersion(String ver1, String ver2){
+		if (ver1 == null && ver2 == null){
+			return 0;
+		}
+		if (ver1 == null){
+			return -1;
+		}
+		if (ver2 == null){
+			return 1;
+		}
+		return ver1.compareTo(ver2);
 	}
 
 	@FunctionalInterface
