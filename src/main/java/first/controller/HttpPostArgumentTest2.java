@@ -116,9 +116,11 @@ public class HttpPostArgumentTest2 {
 				
 				File file = fList[j];
 				if (file.isFile()) {//http://media.thedoc.cn/upload/img/
-					Map<String, String> map = httpPostArgumentTest2.SubmitPost("http://media.thedoc.cn/upload/waterimg/?type=医生头像&suffix=jpg&file=", file.getName(), path);
+					Map<String, String> map = httpPostArgumentTest2.SubmitPost("http://media.thedoc.cn/upload/img/?type=认证信息&suffix=jpg&file=", file.getName(), path);
 					//String s="update geo_hospital set photo='"+map.get("url")+"' where id="+map.get("id")+";";
-					String s="update member_doctor set card_url='"+map.get("url")+"',check_card_url='1' where id='"+map.get("id")+"';";
+					//String s="update member_doctor set card_url='"+map.get("url")+"',check_card_url='1' where id='"+map.get("id")+"';"; //身份证
+					//String s="update member_doctor set portrait='"+map.get("url")+"' where id='"+map.get("id")+"';";  //头像
+					String s=map.get("url")+","+map.get("id");  //认证信息
 					//String s=map.get("url")+","+map.get("id");
 					dataList.add(s);
 				}
