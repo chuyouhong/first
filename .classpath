@@ -86,5 +86,7 @@
 	<classpathentry kind="lib" path="F:/jar包/httpcomponents-client-4.2.5/lib/httpmime-4.2.5.jar"/>
 	<classpathentry kind="lib" path="F:/jar包/httpcomponents-client-4.2.5/lib/json-20150729.jar"/>
 	<classpathentry kind="lib" path="F:/myFirstProject/first/yunpian-java-sdk.jar"/>
+	<classpathentry kind="lib" path="F:/myFirstProject/first/swingx-1.6.1.jar"/>
+	<classpathentry kind="lib" path="F:/myFirstProject/first/jai-imageio-1.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
