@@ -88,5 +88,16 @@
 	<classpathentry kind="lib" path="F:/myFirstProject/first/yunpian-java-sdk.jar"/>
 	<classpathentry kind="lib" path="F:/myFirstProject/first/swingx-1.6.1.jar"/>
 	<classpathentry kind="lib" path="F:/myFirstProject/first/jai-imageio-1.1.jar"/>
+	<classpathentry kind="lib" path="F:/robocode/libs/codesize-1.1.jar"/>
+	<classpathentry kind="lib" path="F:/robocode/libs/picocontainer-2.14.2.jar"/>
+	<classpathentry kind="lib" path="F:/robocode/libs/robocode.battle-1.9.2.6.jar"/>
+	<classpathentry kind="lib" path="F:/robocode/libs/robocode.core-1.9.2.6.jar"/>
+	<classpathentry kind="lib" path="F:/robocode/libs/robocode.host-1.9.2.6.jar"/>
+	<classpathentry kind="lib" path="F:/robocode/libs/robocode.jar"/>
+	<classpathentry kind="lib" path="F:/robocode/libs/robocode.repository-1.9.2.6.jar"/>
+	<classpathentry kind="lib" path="F:/robocode/libs/robocode.sound-1.9.2.6.jar"/>
+	<classpathentry kind="lib" path="F:/robocode/libs/robocode.ui.editor-1.9.2.6.jar"/>
+	<classpathentry kind="lib" path="F:/robocode/libs/robocode.ui-1.9.2.6.jar"/>
+	<classpathentry kind="lib" path="F:/robocode/libs/roborumble.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
