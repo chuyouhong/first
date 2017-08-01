@@ -1,5 +1,6 @@
 package first.controller.test;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.Clock;
 import java.time.DayOfWeek;
@@ -19,8 +20,11 @@ import java.util.Locale;
 
 public class TimeController {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ParseException {
+		
+		
 		Date date=new Date();
+		addOneMonth();
 		//是否为本月最后一天
 		boolean istrue=isLastDayOfMonth(date);
 
@@ -105,5 +109,17 @@ public class TimeController {
             return true;
         }
         return false;
+    }
+	
+	public static String addOneMonth() throws ParseException {
+		String da=null;
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        Date date=sdf.parse("2017-07-31");
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        System.out.println(sdf.format(calendar.getTime()));
+        calendar.add(Calendar.MONTH, -12);
+        System.out.println(sdf.format(calendar.getTime()));
+        return da;
     } 
 }
