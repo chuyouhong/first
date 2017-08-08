@@ -5,18 +5,18 @@ package first.controller.client;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.net.URL;
-public class URLConnection {
+import java.net.URLConnection;
+public class URLConnectionThread {
 	public static void main(String[] args) {
 		try {
-			URL url=new URL("http://192.168.10.212:8082/img/31744437-344f-4cf7-82cc-009641fd901e.jpg");
-			java.net.URLConnection conn=url.openConnection();
+			URL url=new URL("file:///F:/ri.gif");
+			URLConnection conn=url.openConnection();
 			conn.connect();
 			InputStream is = conn.getInputStream();
-			System.out.println(is.read());
 			int len=conn.getContentLength();
 			System.out.println("图片大小："+(double)len/1024+"kb");
 			System.out.println("图片名称："+url.getFile().substring(url.getFile().lastIndexOf('/')+1));
-			FileOutputStream fos=new FileOutputStream("F:\\tupian.jpg");
+			FileOutputStream fos=new FileOutputStream("F:\\ri_bak.gif");
 			byte[] buf=new byte[1024];
 			int size=-1;
 			while((size=is.read(buf))!=-1){
@@ -29,7 +29,5 @@ public class URLConnection {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-		
 	}
 }

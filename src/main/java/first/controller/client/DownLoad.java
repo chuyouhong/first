@@ -3,6 +3,7 @@ package first.controller.client;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.net.URL;
+import java.net.URLConnection;
 
 /**
  * Internet资源下载的断点续传
@@ -23,7 +24,7 @@ public class DownLoad {
 	public void down() {
 		try {
 			URL url = new URL("http://192.168.10.212:8082/img/31744437-344f-4cf7-82cc-009641fd901e.jpg");
-			java.net.URLConnection conn = url.openConnection();
+			URLConnection conn = url.openConnection();
 			// 设置请求的RANGE和User-agent参数
 			conn.setRequestProperty("User-agent", "NetFox");
 			String sProperty = "byte=" + start + "-";

@@ -3,6 +3,7 @@ package first.controller.client;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
+import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
@@ -18,7 +19,7 @@ public class GetInternetInfomation {
 
 	public Collection searchURL(String urlString) {
 		URL url2 = null;
-		java.net.URLConnection conn = null;
+		URLConnection conn = null;
 		String nextLine = null;
 		StringTokenizer tokenizer = null;
 		Collection urlCollection = new ArrayList();
