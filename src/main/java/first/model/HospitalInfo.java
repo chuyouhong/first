@@ -1,6 +1,8 @@
 package first.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 public class HospitalInfo implements Serializable {
 	protected String provicne_name;
@@ -9,6 +11,7 @@ public class HospitalInfo implements Serializable {
 	protected String town_name;
 	protected String name;
 	protected String url;
+	public static final List<String> CASE_INSENSITIVE_ORDER = new ArrayList<String>();
 
 	public String getProvicne_name() {
 		return provicne_name;
@@ -56,5 +59,10 @@ public class HospitalInfo implements Serializable {
 
 	public void setUrl(String url) {
 		this.url = url;
+	}
+	
+	public void show(){	
+		String all="name:"+getName()+";url:"+getUrl();
+		System.out.println(all);
 	}
 }
