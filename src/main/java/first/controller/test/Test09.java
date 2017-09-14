@@ -17,6 +17,22 @@ public class Test09 {
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		} 
+        Integer aa = new Integer(3);
+        Integer bb = 3;                  
+        int cc = 3;
+        System.out.println(aa.equals(bb));//T     
+        System.out.println(aa.equals(cc));//F 
+        System.out.println(bb.equals(cc));//F 
+//        Integer f1 = 100, f2 = 100, f3 = 150, f4 = 150;
+//
+//        System.out.println(f1 == f2);
+//        System.out.println(f3 == f4);
+        
+        String s1 = new StringBuilder("go").append("od").toString();
+        	System.out.println(s1.intern() == s1);
+        String s2 = new StringBuilder("ja").append("va").toString();
+        	System.out.println(s2.intern() == s2);
+        	System.out.println(s2.equals("java"));
 
 	}
 }
