@@ -2,16 +2,18 @@ package first.controller.pattern;
 
 public class Proxy implements Subject{
 	
-	private RealSubject realSubject;
+	private Subject subject;
 	
-	public Proxy(RealSubject realSubject) {
-		this.realSubject=realSubject;
+	public Proxy(Subject subject) {
+		this.subject=subject;
 	}
+	
+	
 	@Override
 	public void request() {
 		System.out.println("before");
 		try{
-			realSubject.request();
+			subject.request();
 		}catch(Exception e){
 			System.out.println("ex:"+e.getMessage());
 			throw e;
@@ -23,7 +25,7 @@ public class Proxy implements Subject{
 	public void hello() {
 		System.out.println("before");
 		try{
-			realSubject.hello();
+			subject.hello();
 		}catch(Exception e){
 			System.out.println("ex:"+e.getMessage());
 			throw e;
