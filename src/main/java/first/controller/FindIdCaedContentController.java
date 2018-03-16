@@ -34,7 +34,7 @@ public class FindIdCaedContentController {
         System.setProperty("aip.log4j.conf", "path/to/your/log4j.properties");
 
         // 调用接口
-        String path = "test.jpg";
+        String path = "aaa.jpg";
         JSONObject res = client.basicGeneral(path, new HashMap<String, String>());
         System.out.println(res.toString(2));
         
@@ -50,12 +50,12 @@ public class FindIdCaedContentController {
         // 参数为本地图片路径
         String image = "test.jpg";
         res = client.idcard(image, idCardSide, options);
-        System.out.println(res.toString(2));
+      //  System.out.println(res.toString(2));
 
         // 参数为本地图片二进制数组
         byte[] file = getImageBinary(image);
         res = client.idcard(file, idCardSide, options);
-        System.out.println(res.toString(2));
+     //   System.out.println(res.toString(2));
         
     }
     
