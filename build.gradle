@@ -40,7 +40,10 @@ dependencies {
     compile('com.yunpian.sdk:yunpian-java-sdk:1.0')
     compile('org.json:json:20180130')
     compile('com.baidu.aip:java-sdk:4.1.0')
-    
+    compile('com.sun.jersey:jersey-core:1.19')
+	compile('com.sun.jersey:jersey-client:1.19')
+	compile('com.sun.jersey.contribs:jersey-multipart:1.19')
+    compile('org.springframework.boot:spring-boot-starter-mail')
 }
 
 eclipse {
