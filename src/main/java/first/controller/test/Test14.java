@@ -8,6 +8,11 @@ import java.util.Date;
 public class Test14 {
 
 	public static void main(String[] args) {
+		String a="abcdefg";
+		StringBuffer sb1=new StringBuffer();
+		sb1.append(a);
+		System.out.println(sb1.reverse());
+		
 
 		long en = 1526572800000l; //1526619600000
 

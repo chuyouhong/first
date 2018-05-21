@@ -3,7 +3,7 @@ package first.controller.test;
 public class Test11 {
 	public static void main(String[] args) {
 
-		solution(5);
+		solution(15);
 	}
 
 	public static void solution(int n) {
