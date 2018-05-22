@@ -8,6 +8,10 @@ import java.util.Date;
 public class Test14 {
 
 	public static void main(String[] args) {
+		String str="Hello, welcome to LifeWow!\nThis is an automatic response sent when you registering an email address on LifeWow to verify that the email is valid.\nYour verification code:%s, valid for 30 mins. Please do not provide it to anyone.";
+		String s=String.format(str, "111111");
+		System.out.println(s);
+		
 		String a="abcdefg";
 		StringBuffer sb1=new StringBuffer();
 		sb1.append(a);
