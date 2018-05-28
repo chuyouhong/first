@@ -8,10 +8,14 @@ import java.io.UnsupportedEncodingException;
  */
 public class Test09 {
 	public static void main(String[] args) {
-		String a=new String("safsdfds辨识度ds");
+		String str="abc";
+		
+		System.out.println(str.getBytes());
+		System.out.println(str.getBytes());
+		String a=new String("sfsdfds162辨识度ds");
 		byte[] b;
 		try {
-			b = a.getBytes("GBK");
+			b = a.getBytes("utf-8");
 			int c = b.length;
 			System.out.println(c);
 		} catch (UnsupportedEncodingException e) {
