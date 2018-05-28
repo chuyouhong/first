@@ -1,20 +1,33 @@
 package first.controller.test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Test15 {
 
 	public static void main(String[] args) throws InterruptedException {
+		List<String> list = new ArrayList();
+		list.add("123");
+		list.add("456");
+		list.add("789");
+		Object[] arr = list.toArray(new String[list.size()]);
+
 		System.out.println("qqqqq");
-		AThread at = new AThread();
+		AThread at = new AThread(10);
 		Thread t = new Thread(at);
 		t.start();
-		Thread.sleep(10000);
+		Thread.sleep(100);
 		System.out.println("qqqqq");
 	}
 
 }
 
 class AThread implements Runnable {
-	int num = 100;
+	private int num;
+
+	AThread(int num) {
+		this.num = num;
+	}
 
 	@Override
 	public void run() {
