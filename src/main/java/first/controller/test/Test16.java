@@ -1,11 +1,23 @@
 package first.controller.test;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 public class Test16 {
 
-	public static void main(String[] args) {
-		System.out.println(getTimeZone());
+	public static void main(String[] args) throws ParseException {
+		
+		SimpleDateFormat dft = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(new Date());
+		cal.add(Calendar.HOUR_OF_DAY, 3);
+		Date endDate = dft.parse(dft.format(cal.getTime()));
+		
+		System.out.println(endDate);
+		
+		System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
 	}
 
 	public static int getTimeZone() {
