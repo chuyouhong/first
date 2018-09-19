@@ -18,7 +18,7 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 public class MyClientTwo {
-	JFrame jf = new JFrame("聊天室客户端");
+	JFrame jf = new JFrame("聊天室客户端MyClientTwo");
 	JTextArea jt = new JTextArea();
 	DataOutputStream dos = null;
 	JTextField jtf = new JTextField(15);
@@ -27,7 +27,7 @@ public class MyClientTwo {
 		MyClientTwo c = new MyClientTwo();
 		try {
 			c.createForm();
-			c.clientStart("192.168.10.58", 8888);
+			c.clientStart("192.168.10.123", 8888);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
