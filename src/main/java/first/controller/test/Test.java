@@ -1,11 +1,19 @@
 package first.controller.test;
 
 import java.io.UnsupportedEncodingException;
+import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Test {
+	private static DecimalFormat decimalFormat = new DecimalFormat("0.00");
+	
 	public static void main(String[] args) throws UnsupportedEncodingException {
+		System.out.println(decimalFormat.format(477.636));
+		System.out.println(decimalFormat.format(45677.632));
+		System.out.println(decimalFormat.format(545677.632));
+		String aa="001";
+		System.out.println(Integer.valueOf(aa));
 		Map<String,String> map=new HashMap<String,String>();
 		map.put("aaa", null);
 		map.put(null, "1");
