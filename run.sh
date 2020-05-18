@@ -1,1 +1,0 @@
-./gradlew build && java -jar build/libs/first.jar
